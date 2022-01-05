@@ -1,12 +1,12 @@
 def find_word(text, find_word):
+    list_find_text = []
 
     split_text = text.split(".")
-    lst_senteces = []
+    
     for row in split_text:
         if find_word in row:
-            row = ('..' + row[:5] + '..') if len(row) > 5 else row
-            lst_senteces.append(row)
-    return lst_senteces
+            list_find_text.append(('..' + row[:5] + '..') if len(row) > 5 else row)
+    return list_find_text
 
 print(
     find_word(
